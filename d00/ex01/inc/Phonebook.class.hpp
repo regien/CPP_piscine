@@ -24,5 +24,4 @@ class Phonebook
 		void			add_contact();
 };
 
-
 #endif

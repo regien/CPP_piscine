@@ -8,13 +8,27 @@
 
 char	err_mssg[] = "Valid Commands: ADD, SEARCH and EXIT";
 
-
+// delete me please
 void	init_classes(Phonebook vainas[])
 {
 	for (int i = 0; i < 8; i++)
 	{
 		std::cout << "valor de vaina N" << i << " = " << vainas[i].taken << std::endl;
 	}
+}
+
+void			print_search_string(Phonebook iter, int index)
+{
+	std::string	holder;
+
+	std::cout << std::setfill(' ') << std::setw(10) << std::cout(index) << "|";
+	if (iter.first_name.size() <= 10)
+		std::cout << std::setfill(' ') << std::setw(10)
+		<< iter.first_name << 
+	else
+		std::cout << iter.first_name.substr(0, 8) << "." << '|';
+		
+	return (holder);
 }
 
 int		available_space(Phonebook pages[])
@@ -40,11 +54,23 @@ void	adding_someone(Phonebook pages[])
 		std::cout << "Pages at maximum capacity" << std::endl;
 }
 
-/*
+
 void	Search_command(Phonebook pages[])
 {
-	if (pages)
-}*/
+	int				i;
+	std::string		line_to_print;
+
+	i = -1;
+	std::cout << "      index|first name| last name|  nickname" << std::endl;
+	if (++i < MAX_PAGES)
+	{
+		if (pages[i].taken != 0)
+		{
+			// print_shit
+			
+		}
+	}
+}
 
 int		main(void)
 {
