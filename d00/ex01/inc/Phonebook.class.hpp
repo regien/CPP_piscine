@@ -21,7 +21,7 @@ class Phonebook
 		std::string		underwear_color;
 		std::string		darkest_secret;
 		
-		add_contact();
+		void			add_contact();
 };
 
 

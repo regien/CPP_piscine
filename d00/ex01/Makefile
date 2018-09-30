@@ -6,11 +6,11 @@
 #    By: gmalpart <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/09/27 02:14:08 by gmalpart          #+#    #+#              #
-#    Updated: 2018/09/27 20:50:24 by gmalpart         ###   ########.fr        #
+#    Updated: 2018/09/29 19:20:09 by gmalpart         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		= megaphone
+NAME		= phonebook
 
 CPP			= g++
 CFLAGS		= -Wall -Werror -Wextra
@@ -26,17 +26,24 @@ COM_COLOR	= \033[38;5;200m
 LIB_COLOR	= \033[1;32m
 NO_COLOR	= \033[m
 
-SRC			= megaphone.cpp
+
+CLASSES		= Phonebook.class.cpp
+
+FILES		= phonebook.cpp
+
+ADD_CLSS	= $(addprefix src/, $(CLASSES))
+SRC			= $(addprefix src/, $(FILES))
+SRC			+= $(ADD_CLSS)
 
 OBJ			= $(SRC:.cpp=.o)
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	$(CPP) $(CFLAGS) -o $(NAME) $(OBJ)
+	$(CPP) $(CFLAGS) $(INC_FLAGS) -o $(NAME) $(OBJ)
 
 %.o: %.cpp
-	$(CPP) $(CFLAGS) -o $@ -c $<
+	$(CPP) $(CFLAGS) $(INC_FLAGS) -o $@ -c $<
 
 clean:
 	@rm -f $(OBJ)
