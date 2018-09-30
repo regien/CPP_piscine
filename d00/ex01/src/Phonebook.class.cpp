@@ -14,7 +14,6 @@ Phonebook::~Phonebook()
 void	Phonebook::add_contact(void)
 {
 	taken = 1;
-	std::cout << "Entering add_contact" << std::endl;
 	std::cout << "Let's add your contact into the Phonebook" << std::endl;
 	std::cout << "Enter your first name: ";
 	std::getline(std::cin, first_name);

@@ -8,27 +8,23 @@
 
 char	err_mssg[] = "Valid Commands: ADD, SEARCH and EXIT";
 
-// delete me please
-void	init_classes(Phonebook vainas[])
+void			print_width(std::string str)
 {
-	for (int i = 0; i < 8; i++)
-	{
-		std::cout << "valor de vaina N" << i << " = " << vainas[i].taken << std::endl;
-	}
+	if (str.size() <= 10)
+		std::cout << std::setfill(' ') << std::setw(10) << str;
+	else
+		std::cout << str.substr(0, 9) << ".";
 }
 
 void			print_search_string(Phonebook iter, int index)
 {
-	std::string	holder;
-
-	std::cout << std::setfill(' ') << std::setw(10) << std::cout(index) << "|";
-	if (iter.first_name.size() <= 10)
-		std::cout << std::setfill(' ') << std::setw(10)
-		<< iter.first_name << 
-	else
-		std::cout << iter.first_name.substr(0, 8) << "." << '|';
-		
-	return (holder);
+	std::cout << std::setfill(' ') << std::setw(10) << (index + 1) << "|";
+	print_width(iter.first_name);
+	std::cout << "|";
+	print_width(iter.last_name);
+	std::cout << "|";
+	print_width(iter.nickname);
+	std::cout << std::endl;
 }
 
 int		available_space(Phonebook pages[])
@@ -37,10 +33,8 @@ int		available_space(Phonebook pages[])
 
 	i = -1;
 	while (++i < MAX_PAGES)
-	{
 		if(pages[i].taken == 0)
 			return (i);
-	}
 	return (-1);
 }
 
@@ -61,15 +55,10 @@ void	Search_command(Phonebook pages[])
 	std::string		line_to_print;
 
 	i = -1;
-	std::cout << "      index|first name| last name|  nickname" << std::endl;
-	if (++i < MAX_PAGES)
-	{
+	std::cout << "     index|first name| last name|  nickname" << std::endl;
+	while (++i < MAX_PAGES)
 		if (pages[i].taken != 0)
-		{
-			// print_shit
-			
-		}
-	}
+			print_search_string(pages[i], i);
 }
 
 int		main(void)
@@ -77,7 +66,6 @@ int		main(void)
 	Phonebook		contactos[8];
 	std::string		line;
 
-	init_classes(contactos);
 	while(1)
 	{
 		std::cout << "Enter your Command: ";
@@ -85,7 +73,7 @@ int		main(void)
 		if(line == "ADD")
 			adding_someone(contactos);
 		else if (line == "SEARCH")
-			;
+			Search_command(contactos);
 		else if (line == "EXIT")
 			return (0);
 		else
