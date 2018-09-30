@@ -3,13 +3,9 @@
 Phonebook::Phonebook()
 {
 	taken = 0;
-//	std::cout << "Constructor is called" << std::endl;
 }
 
-Phonebook::~Phonebook()
-{
-//	std::cout << "Calling destructor" << std::endl;
-}
+Phonebook::~Phonebook() {};
 
 void	Phonebook::add_contact(void)
 {
