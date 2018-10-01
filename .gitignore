@@ -55,6 +55,7 @@ dkms.conf
 *.swp
 .vscode
 *.DS*
+*._*
 
 # Dependency directories
 node_modules/
