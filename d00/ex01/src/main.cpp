@@ -1,6 +1,6 @@
 #include <iostream>
 #include <list>
-#include "Phonebook.class.hpp"
+#include "Phonebook.hpp"
 #include <string>
 #include <iomanip>
 
@@ -52,13 +52,26 @@ void	adding_someone(Phonebook pages[])
 void	Search_command(Phonebook pages[])
 {
 	int				i;
-	std::string		line_to_print;
+	int				e;
+	std::string		buffer;
 
 	i = -1;
+	e = 0;
 	std::cout << "     index|first name| last name|  nickname" << std::endl;
 	while (++i < MAX_PAGES)
 		if (pages[i].taken != 0)
 			print_search_string(pages[i], i);
+	std::cout << "Enter the index you want to look for: ";
+	std::getline(std::cin, buffer);
+	std::remove(buffer.begin(), buffer.end(), ' ');
+	if (buffer.size() > 6 || buffer == "")
+	{
+		std::cout << "invalid index or empty" << std::endl;
+		return ;
+	}
+	e = std::stoi(buffer);
+	if (e >= 1 && e <= 8)
+		pages[e - 1].print_index(e);
 }
 
 int		main(void)

@@ -6,7 +6,7 @@
 #    By: gmalpart <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/09/27 02:14:08 by gmalpart          #+#    #+#              #
-#    Updated: 2018/09/29 19:20:09 by gmalpart         ###   ########.fr        #
+#    Updated: 2018/10/01 16:01:48 by gmalpart         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,9 +27,9 @@ LIB_COLOR	= \033[1;32m
 NO_COLOR	= \033[m
 
 
-CLASSES		= Phonebook.class.cpp
+CLASSES		= Phonebook.cpp
 
-FILES		= phonebook.cpp
+FILES		= main.cpp
 
 ADD_CLSS	= $(addprefix src/, $(CLASSES))
 SRC			= $(addprefix src/, $(FILES))
