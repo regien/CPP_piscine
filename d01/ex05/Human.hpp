@@ -4,16 +4,20 @@
 # include <sstream>
 # include "Brain.hpp"
 
+/*
+** a const member never modifies data member in the object
+*/
+
 class	Human
 {
-	Brain				_cerebro;
+	const Brain				_cerebro;
 
 	public:
 		Human();
 		~Human();
 
-		std::string		identify();
-		Brain			&getBrain();
+		std::string			identify() const;
+		const Brain			&getBrain() const;
 };
 
 #endif

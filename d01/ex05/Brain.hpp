@@ -10,7 +10,7 @@ class Brain
 		Brain();
 		~Brain();
 
-		std::string		identify();
+		std::string		identify() const;
 };
 
 #endif

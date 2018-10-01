@@ -4,12 +4,12 @@ Human::Human() {}
 
 Human::~Human() {}
 
-std::string		Human::identify()
+std::string		Human::identify() const
 {
 	return (_cerebro.identify());
 }
 
-Brain			&Human::getBrain()
+const Brain		&Human::getBrain() const
 {
 	return	(_cerebro);
 }

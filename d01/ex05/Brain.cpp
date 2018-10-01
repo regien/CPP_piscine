@@ -11,7 +11,7 @@ Brain::~Brain() {};
 ** attribute .str() is gonna return his content.
 */
 
-std::string	Brain::identify()
+std::string	Brain::identify() const
 {
 	std::stringstream	holder;
 	holder << this;
