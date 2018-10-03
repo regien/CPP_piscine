@@ -8,7 +8,7 @@ class	Fixed
 {
 	private:
 		int					_point_value;
-		static const int	_frac_bits;
+		static const int	_frac_bits = 8;
 	
 	public:
 		Fixed();

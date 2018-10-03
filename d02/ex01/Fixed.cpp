@@ -1,6 +1,6 @@
 #include "Fixed.hpp"
 
-const int		Fixed::_frac_bits = 8;
+//const int		Fixed::_frac_bits = 8;
 
 Fixed::Fixed()
 {
@@ -23,7 +23,9 @@ Fixed::Fixed(const int value)
 Fixed::Fixed(const float value)
 {
 	std::cout << "Float constructor called" << std::endl;
-	_point_value = (int)roundf(value * (1 << _frac_bits));
+	std::cout << "trying to fix value = "
+			  << roundf(value * (1 << _frac_bits)) << std::endl;
+	_point_value = roundf(value * (1 << _frac_bits));
 }
 
 Fixed::~Fixed() {
