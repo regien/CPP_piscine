@@ -70,6 +70,8 @@ void	Search_command(Phonebook pages[])
 		return ;
 	}
 	e = std::stoi(buffer);
+	if (e == 0)
+		std::cerr << "invalid index or empty" << std::endl;
 	if (e >= 1 && e <= 8)
 		pages[e - 1].print_index(e);
 }

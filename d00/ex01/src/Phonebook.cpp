@@ -9,23 +9,21 @@ Phonebook::~Phonebook() {};
 
 void	Phonebook::print_index(int i)
 {
-	int		e = i + 1;
-
 	if (taken == 0)
 		std::cout << "invalid index or empty" << std::endl;
 	else
 	{
-		std::cout << "<User " << e << "> first_name: " << first_name << std::endl;
-		std::cout << "<User " << e << "> last_name: " << last_name << std::endl;
-		std::cout << "<User " << e << "> nickname: " << nickname << std::endl;
-		std::cout << "<User " << e << "> login: " << login << std::endl;
-		std::cout << "<User " << e << "> postal_address: " << postal_address << std::endl;
-		std::cout << "<User " << e << "> email_address: " << email_address << std::endl;
-		std::cout << "<User " << e << "> phone_number: " << phone_number << std::endl;
-		std::cout << "<User " << e << "> birthday_date: " << birthday_date << std::endl;
-		std::cout << "<User " << e << "> favorite_meal: " << favorite_meal << std::endl;
-		std::cout << "<User " << e << "> underwear_color: " << underwear_color << std::endl;
-		std::cout << "<User " << e << "> darkest_secret: " << darkest_secret << std::endl;
+		std::cout << "<User " << i << "> first_name: " << first_name << std::endl;
+		std::cout << "<User " << i << "> last_name: " << last_name << std::endl;
+		std::cout << "<User " << i << "> nickname: " << nickname << std::endl;
+		std::cout << "<User " << i << "> login: " << login << std::endl;
+		std::cout << "<User " << i << "> postal_address: " << postal_address << std::endl;
+		std::cout << "<User " << i << "> email_address: " << email_address << std::endl;
+		std::cout << "<User " << i << "> phone_number: " << phone_number << std::endl;
+		std::cout << "<User " << i << "> birthday_date: " << birthday_date << std::endl;
+		std::cout << "<User " << i << "> favorite_meal: " << favorite_meal << std::endl;
+		std::cout << "<User " << i << "> underwear_color: " << underwear_color << std::endl;
+		std::cout << "<User " << i << "> darkest_secret: " << darkest_secret << std::endl;
 	}
 }
 
