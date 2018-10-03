@@ -34,6 +34,9 @@ public:
 
 private:
 
+	//bonus part
+	mutable int	_counter;
+
 	static int	_nbAccounts;
 	static int	_totalAmount;
 	static int	_totalNbDeposits;
