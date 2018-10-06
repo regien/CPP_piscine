@@ -42,12 +42,6 @@ ClapTrap(Name)
 }
 
 ScavTrap::ScavTrap(ScavTrap const &rhs) : ClapTrap(rhs) {}
-/*{
-	_Name = rhs._Name + " copy";
-	*this = rhs;
-	std::cout << "Replicating a ScavTrap, new name "
-			  << _Name << std::endl;
-}*/
 
 ScavTrap::~ScavTrap()
 {

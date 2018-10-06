@@ -41,15 +41,6 @@ ClapTrap(Name)
 			  Name << std::endl;
 }
 
-/*
-FragTrap::FragTrap(FragTrap const &rhs)
-{
-	_Name = rhs._Name + " copy";
-	*this = rhs;
-	std::cout << "Replicating a FFR4G-TP, new name "
-			  << _Name << std::endl;
-}*/
-
 FragTrap::FragTrap(FragTrap const &rhs): ClapTrap(rhs) {}
 
 FragTrap::~FragTrap()
