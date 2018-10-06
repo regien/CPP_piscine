@@ -26,9 +26,9 @@ ScavTrap::ScavTrap()
 	std::cout << "Constructing ScavTrap named Handsome_noone" << std::endl;
 }
 
-ScavTrap::ScavTrap(std::string Name):
-ClapTrap(Name)
+ScavTrap::ScavTrap(std::string Name)
 {
+	_Name = Name;
 	_Hit_Points = 100;
 	_Energy_Points = 50;
 	_Lv = 1;

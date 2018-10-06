@@ -26,9 +26,9 @@ FragTrap::FragTrap()
 	std::cout << "Constructing FFR4G-TP named Handsome_noone" << std::endl;
 }
 
-FragTrap::FragTrap(std::string Name):
-ClapTrap(Name)
+FragTrap::FragTrap(std::string Name)
 {
+	_Name = Name;
 	_Hit_Points = 100;
 	_Energy_Points = 100;
 	_Lv = 1;
