@@ -124,3 +124,9 @@ void				ClapTrap::beRepaired(unsigned int amount)
 			  << " of HP *" << std::endl;
 	_Hit_Points = _Hit_Points + recover_amt;
 }
+
+//GETTER
+const std::string			ClapTrap::get_name(void) const
+{
+	return (_Name);
+}

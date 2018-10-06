@@ -26,9 +26,9 @@ ScavTrap::ScavTrap()
 	std::cout << "Constructing ScavTrap named Handsome_noone" << std::endl;
 }
 
-ScavTrap::ScavTrap(std::string Name)
+ScavTrap::ScavTrap(std::string Name):
+ClapTrap(Name)
 {
-	_Name = Name;
 	_Hit_Points = 100;
 	_Energy_Points = 50;
 	_Lv = 1;
@@ -42,12 +42,6 @@ ScavTrap::ScavTrap(std::string Name)
 }
 
 ScavTrap::ScavTrap(ScavTrap const &rhs) : ClapTrap(rhs) {}
-/*{
-	_Name = rhs._Name + " copy";
-	*this = rhs;
-	std::cout << "Replicating a ScavTrap, new name "
-			  << _Name << std::endl;
-}*/
 
 ScavTrap::~ScavTrap()
 {

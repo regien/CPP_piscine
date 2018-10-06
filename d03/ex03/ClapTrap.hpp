@@ -30,6 +30,7 @@ class ClapTrap
 		~ClapTrap();
 		ClapTrap					&operator = (const ClapTrap &data);
 
+		const std::string			get_name(void) const;
 		void						rangedAttack(std::string const & target);
 		void						melleaAttack(std::string const & target);
 		void						takeDamage(unsigned int amount);

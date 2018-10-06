@@ -26,9 +26,9 @@ FragTrap::FragTrap()
 	std::cout << "Constructing FFR4G-TP named Handsome_noone" << std::endl;
 }
 
-FragTrap::FragTrap(std::string Name)
+FragTrap::FragTrap(std::string Name):
+ClapTrap(Name)
 {
-	_Name = Name;
 	_Hit_Points = 100;
 	_Energy_Points = 100;
 	_Lv = 1;
@@ -40,15 +40,6 @@ FragTrap::FragTrap(std::string Name)
 	std::cout << "Constructing FFR4G-TP named" <<
 			  Name << std::endl;
 }
-
-/*
-FragTrap::FragTrap(FragTrap const &rhs)
-{
-	_Name = rhs._Name + " copy";
-	*this = rhs;
-	std::cout << "Replicating a FFR4G-TP, new name "
-			  << _Name << std::endl;
-}*/
 
 FragTrap::FragTrap(FragTrap const &rhs): ClapTrap(rhs) {}
 

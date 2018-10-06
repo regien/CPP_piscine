@@ -1,6 +1,7 @@
 #include "ClapTrap.hpp"
 #include "FragTrap.hpp"
 #include "ScavTrap.hpp"
+#include "NinjaTrap.hpp"
 
 int	main(void)
 {
@@ -74,4 +75,18 @@ int	main(void)
 	test4.challengueNewcomer("terry");
 	std::cout << std::endl;	
 	delete test3;
+
+	//testing Ninjatrap
+	NinjaTrap		hero("jhonathan");
+	NinjaTrap		*villain = new NinjaTrap("Something");
+	NinjaTrap		polonia = hero;
+
+	hero.rangedAttack("Something");
+	hero.melleaAttack("Jhonathan");
+	hero.ninjaShoeBox(vaina);
+	hero.ninjaShoeBox(polonia);
+	hero.ninjaShoeBox(test);
+	std::cout << std::endl;
+
+	delete villain;
 }
