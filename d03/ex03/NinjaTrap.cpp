@@ -69,6 +69,6 @@ void				NinjaTrap::ninjaShoeBox(FragTrap & target)
 
 void				NinjaTrap::ninjaShoeBox(ScavTrap & target)
 {
-	std::cout << "<ScavTrap " << _Name << "> I don't like those things in your head - to - "
+	std::cout << "<NinjaTrap " << _Name << "> I don't like those things in your head - to - "
 			  << target.get_name()  << std::endl;
 }
