@@ -30,6 +30,8 @@ class FragTrap
 		~FragTrap();
 		FragTrap					&operator = (const FragTrap &data);
 
+		int					get_max_ep() const;
+		int					get_max_hp() const;
 		void						rangedAttack(std::string const & target);
 		void						melleaAttack(std::string const & target);
 		void						takeDamage(unsigned int amount);
@@ -38,3 +40,4 @@ class FragTrap
 };
 
 #endif
+

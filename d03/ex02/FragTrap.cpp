@@ -80,3 +80,4 @@ void				FragTrap::vaulthunter_dot_exe(std::string const &target)
 	std::cout << "<FFR4G-TP " << _Name << "> " << _Energy_Points
 			  << " Remaining Energy Points" << std::endl;
 }
+

@@ -72,3 +72,4 @@ void				ScavTrap::challengueNewcomer(std::string const & target)
 	std::cout << "<ScavTrap " << _Name << "> Challengues " << target
 			  << " to " << _semi_random_challengues[rand() % 5] << std::endl;
 }
+

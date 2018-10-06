@@ -18,3 +18,4 @@ class ScavTrap : public ClapTrap
 };
 
 #endif
+

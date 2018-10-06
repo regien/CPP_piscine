@@ -124,8 +124,8 @@ void				FragTrap::takeDamage(unsigned int amount)
 
 void				FragTrap::beRepaired(unsigned int amount)
 {
-	int		HP_calculator;
-	int		recover_amt;
+	int		HP_calculator = 0;
+	int		recover_amt = 0;
 
 	if ((HP_calculator = _Hit_Points + amount) >= _Max_HP)
 	{
@@ -150,4 +150,14 @@ void				FragTrap::vaulthunter_dot_exe(std::string const &target)
 				  << "Vaulthunter_dot_exe * " << std::endl;
 	std::cout << "<FFR4G-TP " << _Name << "> " << _Energy_Points
 			  << " Remaining Energy Points" << std::endl;
+}
+
+int					FragTrap::get_max_ep() const
+{
+	return (_Max_EP);
+}
+
+int					FragTrap::get_max_hp() const
+{
+	return (_Max_HP);
 }

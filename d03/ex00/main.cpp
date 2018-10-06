@@ -42,3 +42,4 @@ int	main(void)
 	d.beRepaired(30);
 	delete ptr;
 }
+

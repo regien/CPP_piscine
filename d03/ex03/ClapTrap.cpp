@@ -130,3 +130,4 @@ const std::string			ClapTrap::get_name(void) const
 {
 	return (_Name);
 }
+

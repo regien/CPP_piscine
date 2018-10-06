@@ -123,8 +123,8 @@ void				ScavTrap::takeDamage(unsigned int amount)
 
 void				ScavTrap::beRepaired(unsigned int amount)
 {
-	int		HP_calculator;
-	int		recover_amt;
+	int		HP_calculator = 0;
+	int		recover_amt = 0;
 
 	if ((HP_calculator = _Hit_Points + amount) >= _Max_HP)
 	{
@@ -141,3 +141,14 @@ void				ScavTrap::challengueNewcomer(std::string const & target)
 	std::cout << "<ScavTrap " << _Name << "> Challengues " << target
 			  << " to " << _semi_random_challengues[rand() % 5] << std::endl;
 }
+
+int					ScavTrap::get_Max_hp() const
+{
+	return (_Max_HP);
+}
+
+int					ScavTrap::get_Max_ep() const
+{
+	return (_Max_EP);
+}
+

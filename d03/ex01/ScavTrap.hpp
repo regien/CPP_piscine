@@ -30,6 +30,8 @@ class ScavTrap
 		~ScavTrap();
 		ScavTrap					&operator = (const ScavTrap &data);
 
+		int							get_Max_hp() const;
+		int							get_Max_ep() const;
 		void						rangedAttack(std::string const & target);
 		void						melleaAttack(std::string const & target);
 		void						takeDamage(unsigned int amount);

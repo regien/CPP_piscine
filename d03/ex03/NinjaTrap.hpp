@@ -19,3 +19,4 @@ class	NinjaTrap: public ClapTrap
 };
 
 #endif
+

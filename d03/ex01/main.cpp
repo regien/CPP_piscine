@@ -74,3 +74,4 @@ int	main(void)
 	std::cout << std::endl;	
 	delete test3;
 }
+
