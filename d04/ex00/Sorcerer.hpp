@@ -30,3 +30,4 @@ class	Sorcerer
 std::ostream	&operator << (std::ostream &lhs, const Sorcerer &rhs);
 
 #endif
+

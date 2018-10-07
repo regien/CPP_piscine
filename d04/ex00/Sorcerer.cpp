@@ -57,3 +57,4 @@ std::ostream	&operator << (std::ostream &lhs, const Sorcerer &rhs)
 		<< ", and I like ponies !" << std::endl;
 	return (lhs);
 }
+

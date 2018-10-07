@@ -29,3 +29,4 @@ class	Victim
 std::ostream	&operator << (std::ostream &lhs, const Victim &rhs);
 
 #endif
+

@@ -47,6 +47,7 @@ std::string			Victim::get_Name() const
 
 std::ostream	&operator << (std::ostream &lhs, const Victim &rhs)
 {
-	lhs << "I'm " << rhs.get_Name() << " and i like otters !"  << std::endl;
+	lhs << "I'm " << rhs.get_Name() << " and I like otters !"  << std::endl;
 	return (lhs);
 }
+

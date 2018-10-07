@@ -33,3 +33,4 @@ void				Peon::getPolymorphed() const
 {
 	std::cout << _Name << " has been turned into a pink pony !" << std::endl;
 }
+
