@@ -8,7 +8,7 @@ int		Game::_nb_players = 1;
 // CONSTRUCTORS
 
 Game::Game():
-_x_win(0), _y_win(0), _running(true) {
+_x_win(0), _y_win(0), _running(true), _lives_remaining(1) {
 	init_scr_game();
 	update_win_size();
 	for (int i = 0; i < MAX_ENE; ++i)
@@ -16,6 +16,7 @@ _x_win(0), _y_win(0), _running(true) {
 	for (int i = 0; i < MAX_ENE; ++i)
 		_bullet_ls[i] = NULL;
 	_playa = new Player(g_game.get_x_win() / 2, (g_game.get_y_win() / 6) * 5);
+	srand(time(0));
 }
 
 Game::Game(int x, int y):
@@ -118,10 +119,11 @@ void			Game::update() {
 
 void			Game::populate_enemies() {
 	// success
-	if ((rand() % 10) < 3)  {
+	if ((rand() % 5000) < 500)  {
 		for (int i = 0; i < MAX_ENE; ++i) {
 			if (get_enemy_index(i) == NULL) {
 				set_enemy_index(i, create_enemy());
+				return ;
 			}
 		}
 	}
@@ -153,6 +155,10 @@ Enemy			*Game::get_enemy_index(int i) {
 	return (_enemy_ls[i]);
 }
 
+int				Game::get_lives_remaining() const {
+	return (_lives_remaining);
+}
+
 // SETTERS
 
 void			Game::set_x_win(int x) {
@@ -173,4 +179,8 @@ void			Game::set_bullet_index(int i, Bullet *rhs) {
 
 void			Game::set_enemy_index(int i, Enemy *rhs) {
 	_enemy_ls[i] = rhs;
+}
+
+void			Game::set_lives_remaining(int i) {
+	_lives_remaining = i;
 }

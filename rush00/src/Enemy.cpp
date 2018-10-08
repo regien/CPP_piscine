@@ -24,9 +24,9 @@ Enemy			&Enemy::operator = (const Enemy &rhs) {
 // public Methods
 void			Enemy::update() {
 	move('S', 1);
-	if ((rand() % 10) == 5) {
+	if ((rand() % 150) == 5) {
 		move('E', 1);
-	} else if ((rand() % 10) == 1) {
+	} else if ((rand() % 150) == 1) {
 		move('W', 1);
 	}
 	//MAKE IT SHOT

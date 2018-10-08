@@ -18,8 +18,9 @@ class Game {
 		static int			_nb_players; // 1 for now
 		int					_x_win;
 		int					_y_win;
-		//
 		bool				_running;
+		int					_lives_remaining;
+		//
 		Player				*_playa;
 		Enemy				*_enemy_ls[MAX_ENE];
 		Bullet				*_bullet_ls[MAX_ENE];
@@ -52,6 +53,7 @@ class Game {
 		bool				get_running() const;
 		Bullet				*get_bullet_index(int i);
 		Enemy				*get_enemy_index(int i);
+		int					get_lives_remaining() const;
 
 		// Setters
 		void				set_x_win(int x);
@@ -59,6 +61,7 @@ class Game {
 		void				set_running(bool value);
 		void				set_bullet_index(int i, Bullet *rhs);
 		void				set_enemy_index(int i, Enemy *rhs);
+		void				set_lives_remaining(int i);
 };
 
 // implementing a tick manager
