@@ -24,8 +24,7 @@ class Player: public Entity {
 		// methods
 		void				do_move(int	value);
 		void				shoot();
-		Bullet				*creating_bullet(); // maybe its apointer
-		// or a gigantic of MAX_BULLETS opposing directions
+		Bullet				*creating_bullet();
 };
 
 #endif

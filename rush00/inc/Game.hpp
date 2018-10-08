@@ -14,18 +14,14 @@
 
 class Game {
 	private:
-//		std::string			_Name; // not neccesary
-		static int			_nb_players; // 1 for now
+		static int			_nb_players;
 		int					_x_win;
 		int					_y_win;
 		bool				_running;
 		int					_lives_remaining;
-		//
 		Player				*_playa;
 		Enemy				*_enemy_ls[MAX_ENE];
 		Bullet				*_bullet_ls[MAX_ENE];
-		//					_Enemies[500] <- inheratance from Entity
-		// maybe an entity manager
 
 	public:
 		Game();
@@ -40,12 +36,11 @@ class Game {
 		void				update_win_size();
 		void				update_win_size(int y, int x);
 		void				init_scr_game();
-		void				run_game(); // run
+		void				run_game();
 		void				update();
 		void				populate_enemies();
 		Enemy				*create_enemy();
-		//set tick
-		//have_we_tick
+		void				check_colition_friends();
 
 		// Getters
 		int					get_x_win() const;		
@@ -64,6 +59,4 @@ class Game {
 		void				set_lives_remaining(int i);
 };
 
-// implementing a tick manager
-// setTimestamp() -> check_TimeStamp();
 #endif

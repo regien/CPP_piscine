@@ -69,22 +69,16 @@ void			Game::init_scr_game() {
 
 void			Game::run_game() {
 	int			input = 0;
-//	Player		player(g_game.get_x_win() / 2, (g_game.get_y_win() / 6) * 5);
-	// init_players and entities or some shit like that
 	while(get_running()) {
 		update_win_size();
 		clear();
 		if ((input = getch()) != ERR) {
-//			std::cout << "vaina" << input << std::endl;
 			_playa->do_move(input);
 		}
-//		mvprintw(_playa->get_y_pos(), _playa->get_x_pos(), "^");
-		// render whole screen
 		update();
 		refresh();
-		usleep((float(float(1) / 30)) * float(1000000)); // can be modular
+		usleep((float(float(1) / 30)) * float(1000000));
 	}
-	std::cout << "pendejada" << std::endl;
 	endwin();
 }
 
@@ -107,10 +101,10 @@ void			Game::update() {
 		if (_enemy_ls[i] != NULL) {
 			_enemy_ls[i]->update();
 			_enemy_ls[i]->print_on_map(std::string("$").c_str());
-			//check colition here
-			//else if here
+			//check_colition_friends();
 			if (_enemy_ls[i]->get_y_pos() >= get_y_win()) {
-				delete (_enemy_ls[i]);
+				if (_enemy_ls[i] != NULL)
+					delete (_enemy_ls[i]);
 				_enemy_ls[i] = NULL;
 			}
 		}
@@ -118,7 +112,6 @@ void			Game::update() {
 }
 
 void			Game::populate_enemies() {
-	// success
 	if ((rand() % 5000) < 500)  {
 		for (int i = 0; i < MAX_ENE; ++i) {
 			if (get_enemy_index(i) == NULL) {
@@ -131,6 +124,21 @@ void			Game::populate_enemies() {
 
 Enemy			*Game::create_enemy() {
 	return (new Enemy(rand() % get_x_win(), 0));
+}
+
+void			Game::check_colition_friends() {
+	for(int i = 0; i < MAX_ENE; ++i) {
+		if (_enemy_ls[i] != NULL) {
+			if ((_playa->get_x_pos() == _enemy_ls[i]->get_x_pos()) && 
+			(_playa->get_y_pos() == _enemy_ls[i]->get_y_pos())) {
+				delete (_enemy_ls[i]);
+				_enemy_ls[i] = NULL;
+				set_lives_remaining(get_lives_remaining() - 1);
+				if (get_lives_remaining() <= 0)
+					set_running(false);
+			}
+		}
+	}
 }
 
 // GETTERS
