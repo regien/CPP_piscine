@@ -37,13 +37,21 @@ void			Game::update_win_size() {
 	int			new_y = 0;
 
 	getmaxyx(stdscr, new_y, new_x);
-	set_x_win(new_x);
-	set_y_win(new_y);
+	set_x_win(new_x - 1);
+	set_y_win(new_y - 1);
 }
 
 void			Game::update_win_size(int y, int x) {
 	set_x_win(x);
 	set_y_win(y);
+}
+
+void			Game::init_src() {
+	initscr();
+	noecho();
+	nodelay(stdscr, true);
+	curs_set(0);
+	update_win_size();
 }
 
 // GETTERS

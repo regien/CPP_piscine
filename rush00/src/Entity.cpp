@@ -59,23 +59,12 @@ void			Entity::move(char direction, int speed) {
 			set_y_pos(check_new_y_pos(_y_pos + speed));
 			break;
 		case 'E' :
-			set_x_pos(check_new_y_pos(_x_pos + speed));
+			set_x_pos(check_new_x_pos(_x_pos + speed));
 			break;
 		case 'W' :
-			set_x_pos(check_new_y_pos(_x_pos - speed));
+			set_x_pos(check_new_x_pos(_x_pos - speed));
 			break;
 	}
-}
-
-void			Entity::do_move(int value) {
-	if (value == 'w' || value == 'W')
-		move('N', 1);
-	else if (value == 'a' || value == 'A')
-		move('W', 1);
-	else if (value == 's' || value == 'S')
-		move('S', 1);
-	else if (value == 'd' || value == 'D')
-		move('E', 1);
 }
 
 // GETTERS

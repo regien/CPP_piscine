@@ -26,6 +26,7 @@ int main(int ac, char **av)
 		getmaxyx(stdscr, max_y, max_x);
 		clear();
 		mvprintw(y, x, "o");
+		mvprintw(20, 2, "A");
 		refresh();
 
 		usleep(DELAY);

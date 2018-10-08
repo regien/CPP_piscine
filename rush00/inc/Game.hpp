@@ -29,6 +29,8 @@ class Game {
 		// Methods
 		void				update_win_size();
 		void				update_win_size(int y, int x);
+		void				init_scr();
+		void				run_game(); // run
 		//set tick
 		//have_we_tick
 

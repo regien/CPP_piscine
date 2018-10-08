@@ -5,6 +5,7 @@
 # include <fstream>
 # include <cstdlib>
 # include <string>
+# include <unistd.h>
 # include "Game.hpp"
 # include "Entity.hpp"
 
