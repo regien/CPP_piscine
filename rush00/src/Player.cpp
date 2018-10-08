@@ -1,5 +1,6 @@
 #include "ft_retro.h"
 #include "Player.hpp"
+# define MAX_ENE 500
 
 Player::Player(): Entity() {}
 
@@ -29,4 +30,28 @@ void			Player::do_move(int value) {
 		move('S', 1);
 	else if (value == 'd' || value == 'D')
 		move('E', 1);
+	else if (value == 32)
+		shoot();
+//		shoot();
 }
+
+void			Player::shoot() {
+
+	for (int i = 0; i < MAX_ENE; ++i) {
+		if (g_game.get_bullet_index(i) == NULL) {
+			g_game.set_bullet_index(i, creating_bullet());
+//			g_game.get_bullet_index(i) = new Bullet(get_x_pos(), get_y_pos() + -1, 1);
+//			g_game.get_bullet_index(i) = creating_bullet();
+			return ;
+		}
+	}
+}
+
+Bullet			*Player::creating_bullet() {
+	return (new Bullet(get_x_pos(), get_y_pos() + -1, 1));
+}
+
+/*
+void			Player::shoot(int x, int y) {
+	// create bullet class - direction
+}*/

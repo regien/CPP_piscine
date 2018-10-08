@@ -67,6 +67,10 @@ void			Entity::move(char direction, int speed) {
 	}
 }
 
+void			Entity::print_on_map(const char *str) {
+	mvprintw(get_y_pos(), get_x_pos(), str);
+}
+
 // GETTERS
 
 int				Entity::get_x_pos() const {

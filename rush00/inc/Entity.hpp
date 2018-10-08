@@ -21,6 +21,7 @@ class Entity {
 		int			check_new_x_pos(int x);
 		int			check_new_y_pos(int y);
 		void		move(char direction, int speed);
+		void		print_on_map(const char *str);
 
 		// getters
 		int			get_x_pos() const;
