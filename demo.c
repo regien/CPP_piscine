@@ -4,7 +4,10 @@
 #include <unistd.h>
 
 #define DELAY 30000
-//omg this is termcap as a high level
+/*
+** Simple code to initialize a simple ncurses
+** envio
+*/
 
 
 
