@@ -17,14 +17,14 @@ int	main(void)
 	std::cout << "HIGH DONE" << std::endl;
 
 	Bureaucrat		man("Simon Martinez", 100);
+
 	while (true) {
 		try {
-			man.decrementGrade(5);
+			guy.decrementGrade(5);
 		} catch(std::exception &err) {
 			std::cerr << err.what() << std::endl;
-			break ;
 		}
-		std::cout << man << std::endl;
+		std::cout << guy << std::endl;
 	}
 	std::cout << "LOW DONE" << std::endl;
 }
