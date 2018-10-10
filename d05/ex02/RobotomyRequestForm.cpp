@@ -49,3 +49,4 @@ std::ostream					&operator << (std::ostream &lfs, RobotomyRequestForm const &rhs
 	lfs << "RobotomyRequestForm Target: " << rhs.getTarget();
 	return (lfs);
 }
+

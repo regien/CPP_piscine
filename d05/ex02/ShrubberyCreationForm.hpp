@@ -29,3 +29,4 @@ class ShrubberyCreationForm : public Form
 std::ostream		&operator << (std::ostream &lfs, ShrubberyCreationForm const &rhs);
 
 #endif
+

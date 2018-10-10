@@ -29,3 +29,4 @@ class PresidentialPardonForm : public Form
 std::ostream		&operator << (std::ostream &lfs, PresidentialPardonForm const &rhs);
 
 #endif
+

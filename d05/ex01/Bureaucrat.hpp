@@ -60,3 +60,4 @@ class Bureaucrat
 std::ostream					&operator << (std::ostream &lhs, Bureaucrat const &rhs);
 
 #endif
+

@@ -55,3 +55,4 @@ Form							*Intern::makeForm(std::string Name, std::string Target) {
 	}
 	return (NULL);
 }
+

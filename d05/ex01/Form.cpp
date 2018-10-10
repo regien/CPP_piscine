@@ -108,3 +108,4 @@ std::ostream					&operator << (std::ostream &lhs, Form const &rhs) {
 		<< "\tGrade to Exec : " << rhs.getGradeToExec() << std::endl;
 	return (lhs);
 }
+

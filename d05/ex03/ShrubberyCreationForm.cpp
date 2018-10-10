@@ -42,3 +42,4 @@ std::ostream					&operator << (std::ostream &lfs, ShrubberyCreationForm const &r
 	lfs << "PresindetialPardonForm Target: " << rhs.getTarget();
 	return (lfs);
 }
+

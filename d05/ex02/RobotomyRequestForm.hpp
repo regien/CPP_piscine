@@ -31,3 +31,4 @@ class RobotomyRequestForm : public Form
 std::ostream		&operator << (std::ostream &lfs, RobotomyRequestForm const &rhs);
 
 #endif
+

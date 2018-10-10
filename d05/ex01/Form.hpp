@@ -61,3 +61,4 @@ class Form
 std::ostream					&operator << (std::ostream &lhs, Form const &rhs);
 
 #endif
+

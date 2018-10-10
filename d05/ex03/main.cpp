@@ -18,3 +18,4 @@ int main() {
     form = Arturo.makeForm("FakestForm", "F4k3lyf3");
     std::cout << "Done Testing" << std::endl;
 }
+

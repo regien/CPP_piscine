@@ -121,3 +121,4 @@ std::ostream					&operator << (std::ostream &lhs, Bureaucrat const &rhs) {
 	lhs << rhs.getName() << ", bureaucrat grade " << rhs.getGrade();
 	return (lhs);
 }
+

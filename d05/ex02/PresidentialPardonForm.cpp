@@ -37,3 +37,4 @@ std::ostream					&operator << (std::ostream &lfs, PresidentialPardonForm const &
 	lfs << "PresindetialPardonForm Target: " << rhs.getTarget();
 	return (lfs);
 }
+
