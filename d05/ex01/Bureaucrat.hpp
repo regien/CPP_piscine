@@ -4,6 +4,9 @@
 #include <iostream>
 #include <string>
 #include <cstdlib>
+#include "Form.hpp"
+
+class Form;
 
 class Bureaucrat
 {
@@ -47,6 +50,7 @@ class Bureaucrat
 	// Methods
 	void						incrementGrade(int Grade);
 	void						decrementGrade(int Grade);
+	void						signForm(Form &form);
 
 	// Getters
 	std::string	const			getName() const;
