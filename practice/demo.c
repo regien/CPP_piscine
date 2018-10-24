@@ -7,6 +7,7 @@
 /*
 ** Simple code to initialize a simple ncurses
 ** envio
+** prototype of rush00
 */
 
 
